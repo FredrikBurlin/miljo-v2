@@ -1,8 +1,4 @@
-export const printLine = (line) => {
-  console.log('===> FROM THE PRINT MODULE:', line);
-};
-
-function injectBadgeCSS(miljoUser, miljoColor, showShadow = "") {
+export function injectBadgeCSS(miljoUser, miljoColor, showShadow = "") {
   // Remove any previous style to avoid duplicates
   const prev = document.getElementById('miljo-badge-style');
   if (prev) prev.remove();
@@ -30,11 +26,10 @@ function injectBadgeCSS(miljoUser, miljoColor, showShadow = "") {
   document.head.appendChild(style);
 }
 
-// Use MutationObserver to wait for the element to appear
-const observer = new MutationObserver(() => {
-  injectBadgeCSS("Prod", 152);
-});
-observer.observe(document.body, { childList: true, subtree: true });
-
-// Try once at the start
-injectBadgeCSS("Prod", 152);
+export function observeBadgeInjection(miljoUser, miljoColor, showShadow = "") {
+  const observer = new MutationObserver(() => {
+    injectBadgeCSS(miljoUser, miljoColor, showShadow);
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+  injectBadgeCSS(miljoUser, miljoColor, showShadow);
+} 

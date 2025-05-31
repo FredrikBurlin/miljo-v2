@@ -1,0 +1,3 @@
+export function injectBanner(/* params */) {
+  // ...banner injection code...
+} 
