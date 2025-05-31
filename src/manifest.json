@@ -15,9 +15,6 @@
     },
     "default_title": "Miljö Salesforce org settings"
   },
-  "chrome_url_overrides": {
-    "newtab": "newtab.html"
-  },
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*", "<all_urls>"],
@@ -34,16 +31,13 @@
   ],
   "permissions": [
     "storage",
-    "activeTab",
-    "scripting",
-    "tabs",
-    "declarativeContent"
+    "activeTab"
   ],
   "host_permissions": ["https://*.salesforce.com/*", "https://*.force.com/*"],
   "icons": {
-    "16": "/images/miljo16.png",
-    "32": "/images/miljo32.png",
-    "48": "/images/miljo48.png",
-    "128": "/images/miljo128.png"
+    "16": "miljo16.png",
+    "32": "miljo32.png",
+    "48": "miljo48.png",
+    "128": "miljo128.png"
   }
 }

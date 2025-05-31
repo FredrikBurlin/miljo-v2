@@ -145,6 +145,9 @@ ApiCall({ key: secrets.key });
 - [Webpack documentation](https://webpack.js.org/concepts/)
 - [Chrome Extension documentation](https://developer.chrome.com/extensions/getstarted)
 
----
+### Rebuild
+rm -rf build && npm run build
 
+---
+Thanks to:
 Michael Xieyang Liu | [Website](https://lxieyang.github.io)
